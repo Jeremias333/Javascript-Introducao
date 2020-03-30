@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+		<div id="containerMain">
+			<button class="botao">Abrir Lista</button>
+			<ol id="lista"></ol>
+		</div>
+		<script type="text/javascript">
+			var ulElement = document.createElement("ul");
+			var olElement = document.querySelector("#lista");
+			function preencherLista(){
+				for(var i = 0; i < 3; i++){
+					var elementos = document.createElement("li");
+					elementos.textContent = lista[i];
+					ulElement.appendChild(elementos);
+				}
+
+				olElement.appendChild(ulElement);
+			}
+
+			var lista = ["Diego", "Gabriel", "Lucas"];
+			var btnAbrirLista = document.querySelector(".botao");
+			btnAbrirLista.addEventListener("click", preencherLista);
+		</script>
+	</body>
+</html>
