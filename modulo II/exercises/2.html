@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+		<div id="containerMain">
+			<button class="botao">Gerar nova cor</button><br>
+		</div>
+
+		<script type="text/javascript">
+			function getRandomColor() {
+				var letters = "0123456789ABCDEF";
+				var color = "#";
+				for (var i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+			var newColor;
+			var btnGerar = document.querySelector(".botao");
+			var containerMain = document.querySelector("#containerMain");
+			var newDiv;
+			btnGerar.onclick = () => {
+				newColor = getRandomColor();
+
+				newDiv = document.createElement("div");
+
+				newDiv.style.width = "100px";
+				newDiv.style.height = "100px";
+
+				newDiv.style.backgroundColor = newColor;
+
+				containerMain.appendChild(newDiv);
+			} 
+			
+
+		</script>
+	</body>
+</html>
