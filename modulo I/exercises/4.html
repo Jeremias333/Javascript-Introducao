@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercicio 4</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// De 0-1 ano: Iniciante
+			// De 1-3 anos: Intermediário
+			// De 3-6 anos: Avançado
+			// De 7 acima: Jedi Master
+
+			function retornarExperiencia(anos){
+				if(anos >= 0 && anos <= 1){
+					return "Iniciante";
+				}else if(anos >= 1 && anos <= 3){
+					return "Intermiário";
+				}else if(anos >= 3 && anos <= 6){
+					return "Avançado";
+				}else if(anos >= 7){
+					return "Jedi Master";
+				}
+			}
+
+			var anosDeEstudo = 1.2;
+
+			console.log(retornarExperiencia(anosDeEstudo));
+
+		</script>
+	</body>
+</html>
