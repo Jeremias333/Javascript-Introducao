@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso JavaScript</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function verificarHabilidade(skills, item){
+				for(var i = 0; i <= skills.length; i++){
+					if(skills[i] == item){
+						console.log(skills[i]);
+						return true;
+					}
+				}
+				return false;
+			}
+			var skills = ["JavaScript", "ReactJS", "React Native", "Java"];
+			console.log(verificarHabilidade(skills, "Java"));
+
+		</script>
+	</body>
+</html>
