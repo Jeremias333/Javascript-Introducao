@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso JavaScript</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="nome" id="nome" class="nome"/>
+			<button class="botao">Adicionar</button>
+		</div>
+
+		<script type="text/javascript">
+			// var inputElement = document.getElementById("nome");
+			// var inputElement = document.getElementsByTagName("input");
+			// var inputElement = document.getElementsByClassName("nome");
+			// console.log(inputElement);
+
+			var inputElement = document.querySelector("input[name=nome]");
+
+			var buttonElement = document.querySelector("body div#app button");//trará o primeiro da arvore DOM
+			//pode ser usado querySelectorAll para buscar todos com a descrição passada.
+			console.log(buttonElement);
+			console.log(inputElement);
+
+
+			buttonElement.onclick = function(){
+				var text = inputElement.value;
+				alert("Texto: "+text);
+			}
+		</script>
+	</body>
+</html>
