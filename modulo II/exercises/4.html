@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+		<div id="mainContainer">
+			<input type="text" name="valor" id="valor"/>
+			<button id="botao">Adicionar a lista.</button>
+			<ol id="corpoLista"></ol>
+		</div>
+		<script type="text/javascript">
+			var ulElement = document.createElement("ul");
+			var olElement = document.querySelector("#corpoLista");
+			var inputElement = document.querySelector("input[name='valor']");
+			var btnElement = document.querySelector("#botao");
+			var mainContainer = document.getElementById("mainContainer");
+			var lista = [];
+			var initia = 0;
+
+			function atualizarLista(lista){
+				if(initia == 0){
+					initia = 1;
+				}else{
+					ulElement.remove();
+					
+				}
+				
+				for(var i = 0; i < lista.length + 1; i++){
+					var liElement = document.createElement("li");
+					liElement.textContent = lista[i];
+					ulElement.appendChild(liElement);
+				}
+
+				olElement.appendChild(ulElement);
+			}
+
+			btnElement.onclick = () => {
+				if(inputElement.value === null || inputElement.value === "" || inputElement.value === " "){
+					lista.push("Elemento Vazio");
+					atualizarLista(lista);
+				}else{
+					inputElement.value = "";
+					lista.push(inputElement.value);
+					atualizarLista(lista);					
+				}
+			}
+		</script>
+	</body>
+</html>
