@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso JavaScript</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="nome" />
+			<button class="botao">Adicionar</button>
+		</div>
+		<script type="text/javascript">
+			var linkElement = document.createElement("a");
+
+			linkElement.setAttribute("href", "https://blogjeje.herokuapp.com");
+			// linkElement.href = "https://blogjeje.herokuapp.com";
+		
+			var textElement = document.createTextNode("Acessar site do meu blog");
+			linkElement.appendChild(textElement);
+
+			var containerElement = document.querySelector("div#app");
+			containerElement.appendChild(linkElement);
+
+			var inputElement = document.querySelector("input");
+			containerElement.removeChild(inputElement);
+		</script>
+	</body>
+</html>
