@@ -4,6 +4,25 @@
 		<title>Curso Javascript</title>
 	</head>
 	<body>
-		
+		<div id="gerar">
+			<button onclick="gerar()">Gerar novo componente</button><br><br>
+		</div>
+
+		<script type="text/javascript">
+			var divContainer = document.querySelector("#gerar");
+
+			var br = document.createElement("br");
+			function gerar(){
+				var quadrado = document.createElement("div");
+
+				quadrado.style.width = "100px";
+				quadrado.style.height = "100px";
+				quadrado.style.backgroundColor = "red";
+				
+				divContainer.appendChild(quadrado);
+			}
+
+
+		</script>
 	</body>
 </html>
