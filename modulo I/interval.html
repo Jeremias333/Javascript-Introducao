@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso JavaScript</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function printar(){
+				console.log("Hello World");
+			}
+
+			// setInterval(printar, 1000);//a cada um segundo repetirá o texto passado.
+			setTimeout(printar, 3000)//vai dar um intervalo de 3 segundos antes de executar apenas umas vez.
+			
+			setInterval(function(){//passando uma função no setInterval.
+				console.log("VAR");
+			}, 1000)
+
+		</script>
+	</body>
+</html>
