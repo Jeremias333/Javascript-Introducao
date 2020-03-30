@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso JavaScript</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function sexo(sexo){
+				//== se os valores de duas variaveis são iguais.
+				//=== se os valores são iguais e os tipos são iguais entre duas variáveis.
+
+				// if(sexo == "M"){
+				// 	return "Masculino";
+				// }else if(sexo == "F"){
+				// 	return "Femenino";
+				// }else{
+				// 	return "INVÁLIDO!";
+				// }
+
+				switch(sexo){
+					case "M":
+						return "Masculino";
+					case "F" :
+						return "Femenino";
+					default:
+						return "INVÁLIDO";
+				}
+			}
+
+			var result = sexo("s");
+			console.log("O sexo passado foi: "+ result);
+		</script>
+	</body>
+</html>	
