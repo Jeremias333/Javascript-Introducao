@@ -12,8 +12,6 @@ var checaIdade = function(idade){
 	});
 }
 
-
-
 checaIdade(18).then(() => {
 	console.log("Acesso ao site, você tem mais de 18");
 }).catch((erro) => {
