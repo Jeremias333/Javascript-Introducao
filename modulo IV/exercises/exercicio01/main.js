@@ -2,7 +2,7 @@ var checaIdade = function(idade){
 	return new Promise((res, rej) => {
 		console.log("Carregando...");
 		setTimeout(function(){
-			console.clear();
+			// console.clear();
 			if(idade >= 18){
 				res();
 			}else{
@@ -17,3 +17,4 @@ checaIdade(18).then(() => {
 }).catch((erro) => {
 	console.warn("Acesso negado! menor que 18");
 });
+console.log("Executa primeiro");
